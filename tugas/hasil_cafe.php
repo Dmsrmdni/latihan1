@@ -9,8 +9,6 @@
     $nasi_goreng = $_POST['nasi_goreng'];
     $mie_goreng = $_POST['mie_goreng'];
     $ayam_goreng = $_POST['ayam_goreng'];
-    $sate = $_POST['sate'];
-    $es_jeruk = $_POST['es_jeruk'];
     $kopi = $_POST['kopi'];
     $teh_manis = $_POST['teh_manis'];
     $lemon_tea = $_POST['lemon_tea'];
@@ -88,49 +86,6 @@
                 <?php }?>
 
 
-                <?php if ($sate) { ?>
-                <tr>
-                    <td><label for="sate">Sate</label></td>
-                    <td>:</td>
-                    <td><?php echo $sate; ?></td>
-                </tr>
-
-                <tr>
-                    <td><label>Harga</label></td>
-                    <td>:</td>
-                    <td>Rp.<?php echo $sate * 20000; ?></td>
-                </tr>
-
-                <tr>
-                    <td colspan="4" style="height: 4px;"></td>
-                </tr>
-                
-
-                <?php $total_harga += $sate * 20000; ?>
-                <?php }?>
-
-                <?php if ($es_jeruk) { ?>
-                <tr>
-                    <td><label for="es_jeruk">Es Jeruk</label></td>
-                    <td>:</td>
-                    <td><?php echo $es_jeruk; ?></td>
-                </tr>
-
-                <tr>
-                    <td><label>Harga</label></td>
-                    <td>:</td>
-                    <td>Rp.<?php echo $es_jeruk * 8000; ?></td>
-                </tr>
-
-                <tr>
-                    <td colspan="4" style="height: 4px;"></td>
-                </tr>
-                
-
-                <?php $total_harga += $es_jeruk * 8000; ?>
-                <?php }?>
-
-
                 <?php if ($kopi) { ?>
                 <tr>
                     <td><label for="kopi">Kopi</label></td>
@@ -200,14 +155,19 @@
                 </tr>
             </table>
             <br>
-            <input type="number" name="bayar" id="bayar">
+            <input type="number" name="inputbayar" id="inputbayar">
+            <input type="hidden" name="totalbayar" value="<?php echo $total_harga; ?>">
             <button type="submit" name="bayar">Bayar</button>
         </form>
         <br>
-        <?php echo $pesan;
+        <?php if (isset($_POST['bayar'])) {
+            $inputbayar = $_POST['inputbayar'];
+            $total_harga = $_POST['totalbayar'];
+            $kembalian = $inputbayar - $total_harga;
+            echo "Total Kembalian :  $kembalian";
+        }
         ?>
-
         <br><br>
-        <a href="1.php">&laquo; Kembali ke daftar menu</a>
+        <a href="index.php">&laquo; Kembali ke daftar menu</a>
     </body>
 </html>

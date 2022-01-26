@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-image: url(https://wallpapercave.com/wp/wp2937416.jpg) ; color:white" >
+<br><br><br><br>
     <fieldset>
     <h1 align="center">Destinasi Wisata Yogyakarta</h1>
     <form action="jumlah.php" method="post">
@@ -78,7 +79,6 @@
                 <td><input type="submit" value="Kirim" name="proses"></td><hr>
             </tr>
         </table>
-        <hr>
     </form>
 </fieldset>    
 </body>

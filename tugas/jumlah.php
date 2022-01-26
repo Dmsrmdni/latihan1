@@ -65,17 +65,13 @@
                     <label for="nasi_goreng"> Rp.15000 - Nasi Goreng</label><br>
                     <input type="checkbox" id="mie_goreng" name="mie_goreng" value="mie_goreng">
                     <label for="mie_goreng"> Rp.12000 - Mie Goreng</label><br>
-                    <input type="checkbox" id="ayam_goreng" name="ayam_goreng" value="Boat">
+                    <input type="checkbox" id="ayam_goreng" name="ayam_goreng" value="ayam_goreng">
                     <label for="ayam_goreng"> Rp.10000 - Ayam Goreng</label><br>
-                    <input type="checkbox" id="sate" name="sate" value="Boat">
-                    <label for="sate"> Rp.20000 - Sate</label><br>
                 </div>
 
                 <label><b>Minuman</b></label>
                 <div style="padding-top: 10px; padding-bottom: 15px;">
                     <input type="hidden" name="destinasi" value="<?php echo $_POST['destinasi']; ?>">
-                    <input type="checkbox" id="es_jeruk" name="es_jeruk " value="es_jeruk">
-                    <label for="es_jeruk"> Rp.8000 - Es Jeruk</label><br>
                     <input type="checkbox" id="kopi" name="kopi" value="kopi">
                     <label for="kopi"> Rp.12000 - Kopi</label><br>
                     <input type="checkbox" id="teh_manis" name="teh_manis" value="teh_manis">

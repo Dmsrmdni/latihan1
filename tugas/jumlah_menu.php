@@ -9,8 +9,6 @@
     $nasi_goreng = $_POST['nasi_goreng'];
     $mie_goreng = $_POST['mie_goreng'];
     $ayam_goreng = $_POST['ayam_goreng'];
-    $sate = $_POST['sate'];
-    $es_jeruk = $_POST['es_jeruk'];
     $kopi = $_POST['kopi'];
     $teh_manis = $_POST['teh_manis'];
     $lemon_tea = $_POST['lemon_tea'];
@@ -41,22 +39,6 @@
                     <td><label for="ayam_goreng">Jumlah Ayam Goreng</label></td>
                     <td>:</td>
                     <td><input type="number" name="ayam_goreng" id="ayam_goreng"></td>
-                </tr>
-                <?php }?>
-
-                <?php if ($sate) { ?>
-                <tr>
-                    <td><label for="sate">Jumlah Sate</label></td>
-                    <td>:</td>
-                    <td><input type="number" name="sate" id="sate"></td>
-                </tr>
-                <?php }?>
-
-                <?php if ($es_jeruk) { ?>
-                <tr>
-                    <td><label for="es_jeruk">Jumlah Es Jeruk</label></td>
-                    <td>:</td>
-                    <td><input type="number" name="es_jeruk" id="es_jeruk"></td>
                 </tr>
                 <?php }?>
 
@@ -93,6 +75,6 @@
         ?>
 
         <br><br>
-        <a href="1.php">&laquo; Kembali ke daftar menu</a>
+        <a href="index.php">&laquo; Kembali ke daftar menu</a>
     </body>
 </html>
